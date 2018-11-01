@@ -77,6 +77,8 @@ class ViewController: UIViewController, UIPickerViewDataSource, UIPickerViewDele
         
         if let priceResult = json["last"].double {
             bitcoinPriceLabel.text = symbol + String(priceResult)
+        } else {
+            bitcoinPriceLabel.text = "Price Unavailable"
         }
     }
 }
